@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Team_Mars_Backend</RootNamespace>
+    <UserSecretsId>d63b0dfc-25f7-4706-8283-74a828c650ba</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data_Admin\Entity_Admin\Fueltype.cs" />
+    <Compile Remove="GraphQL\Schema.cs" />
+    <Compile Remove="GraphQL\VendorMutation.cs" />
+    <Compile Remove="GraphQL\VendorQuery.cs" />
+    <Compile Remove="GraphQL\VendorSchema.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\NewFile.txt" />
+    <None Remove="Data\Entity\NewFile.txt" />
+    <None Remove="Data_Admin\Entity_Admin\NewFile.txt" />
+    <None Remove="GraphQL\NewFile.txt" />
+    <None Remove="GraphQL_Fuel\NewFile.txt" />
+    <None Remove="GraphQL_Fuel\NewFile1.txt" />
+    <None Remove="GraphQL_Order\NewFile.txt" />
+    <None Remove="GraphQL_Order\NewFile1.txt" />
+    <None Remove="Repository\NewFile.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL.Server.All" Version="5.0.0" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.28" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+  </ItemGroup>
+
+
+</Project>
